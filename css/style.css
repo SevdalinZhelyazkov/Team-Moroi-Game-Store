@@ -29,9 +29,22 @@ body {
     margin-bottom: 30px;
 }
 
+.game-main {
+    border-right: 1px solid #ddd;
+}
+
+.item-platform {
+    font-size: 16px;
+    color: #777;
+}
+
 .item-price {
     font-size: 20px;
     color: #1B8EF9;
+}
+
+.nomargin {
+    margin: 0!important;
 }
 
 footer {
@@ -50,6 +63,9 @@ footer {
 }
 
 @media (max-width: 992px) {
+    .game-main {
+        border-right: none;
+    }
     .navbar-header {
         float: none;
     }
