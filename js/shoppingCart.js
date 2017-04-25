@@ -19,4 +19,12 @@ class ShoppingCart {
             this._games.splice(index, 1);
         }
     }
+
+    totalSum(){
+      let sum = 0;
+      for (product of this.games) {
+        sum = sum + product.price;
+      }
+      return sum;
+    }
 }

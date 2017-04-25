@@ -1,10 +1,10 @@
-class Game {
-    constructor(title, description, shortDescription, price, imgURL) {
+class Product {
+    constructor(title, description, price, imgURL, type) {
         this.title = title;
         this.description = description;
-        this.shortDescription = shortDescription;
         this.price = price;
         this.imgURL = imgURL;
+        this.type = type;
     }
 
     get title() {
@@ -21,13 +21,6 @@ class Game {
         this._description = value;
     }
 
-    get shortDescription() {
-        return this._shortDescription;
-    }
-    set shortDescription(value) {
-        this._shortDescription = value;
-    }
-
     get price() {
         return this._price;
     }
@@ -40,5 +33,12 @@ class Game {
     }
     set imgURL(value) {
         this._imgURL = value;
+    }
+
+    get type() {
+        return this._type;
+    }
+    set type(value) {
+        this._type = value;
     }
 }
