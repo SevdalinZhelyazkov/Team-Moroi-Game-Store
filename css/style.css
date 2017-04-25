@@ -34,12 +34,7 @@ body {
 .shopping-cart-item {
     position: relative;
     padding: 10px 0;
-    border-top: 1px solid #ddd;
     border-bottom: 1px solid #ddd;
-}
-
-.shopping-cart-item:first-of-type {
-    border-top: none;
 }
 
 .shopping-cart-item:last-of-type {
@@ -53,7 +48,7 @@ body {
 }
 
 .shopping-cart-item .caption {
-    width: 50%;
+    width: 55%;
     display: inline-block;
     margin-right: -4px;
 }
@@ -65,8 +60,13 @@ body {
 }
 
 .shopping-cart-item img {
-    width: 50%;
+    width: 45%;
     vertical-align: top;
+}
+
+.shopping-cart-total {
+    font-size: 20px;
+    padding-top: 10px;
 }
 
 .big-welcome-banner {
@@ -83,6 +83,9 @@ body {
 
 .game-box {
     margin-bottom: 30px;
+    float: none!important;
+    margin-right: -4px;
+    vertical-align: top;
 }
 
 .game-main {
@@ -115,6 +118,10 @@ footer {
 
     .modal-dialog {
         width: 400px;
+    }
+
+    .game-box {
+        display: inline-block;
     }
 }
 
