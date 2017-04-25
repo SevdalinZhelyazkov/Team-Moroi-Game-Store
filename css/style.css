@@ -8,9 +8,65 @@ body {
 	padding-right: 0!important;
 }
 
-.shopping-cart,
-.shopping-cart:hover {
+.shopping-cart-btn,
+.shopping-cart-btn:hover {
 	background: #333!important;
+}
+
+.shopping-cart-container {
+    position: fixed;
+    right: 0;
+    left: 0;
+    z-index: 2000;
+}
+
+.shopping-cart-box {
+    display: none;
+    background: #fff;
+    border-radius: 5px;
+    border: 1px solid #ddd;
+    padding: 10px 15px;
+    float: right;
+    min-width: 290px;
+    max-width: 40%;
+}
+
+.shopping-cart-item {
+    position: relative;
+    padding: 10px 0;
+    border-top: 1px solid #ddd;
+    border-bottom: 1px solid #ddd;
+}
+
+.shopping-cart-item:first-of-type {
+    border-top: none;
+}
+
+.shopping-cart-item:last-of-type {
+    border-bottom: none;
+}
+
+.shopping-cart-item-delete {
+    position: absolute;
+    right: 0;
+    color: red;
+}
+
+.shopping-cart-item .caption {
+    width: 50%;
+    display: inline-block;
+    margin-right: -4px;
+}
+
+.shopping-cart-item h3 {
+    margin-top: 0;
+    padding-right: 25px;
+    font-size: 20px;
+}
+
+.shopping-cart-item img {
+    width: 50%;
+    vertical-align: top;
 }
 
 .big-welcome-banner {
