@@ -1,2 +1,3 @@
 node-modules
 .eslintrc.json
+debug.log
