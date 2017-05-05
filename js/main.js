@@ -1,1 +1,0 @@
-import jQuery from 'shopping-cart-popup.js';

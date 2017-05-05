@@ -18,4 +18,4 @@ const productListController = {
     }
 };
 
-export { playersController };
+export { productListController };
