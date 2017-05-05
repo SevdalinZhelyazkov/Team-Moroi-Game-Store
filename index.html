@@ -16,6 +16,11 @@
     <link href="./bower_components/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
     <link href="./css/style.css" rel="stylesheet">
 
+    <!-- Sammy -->
+    <script src="bower_components/jquery/dist/jquery.js"></script>
+    <script src="bower_components/sammy/lib/sammy.js"></script>
+    <script src="./app.js"></script>
+
     <!-- SystemJS -->
     <script src="node_modules/systemjs/dist/system.js"></script>
     <script src="config.js"></script>
@@ -26,6 +31,7 @@
 </head>
 
 <body>
+    
     <!-- Navigation -->
     <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
         <div class="container">
@@ -231,139 +237,142 @@
         <!-- /.row -->
 
         <div class="game-box-container">
-            <!-- Page Features  -->
-            <div class="row text-center">
+            <div id="app">
+                <!-- Page Features  -->
+                <div class="row text-center">
 
-                <div class="col-md-3 col-sm-6 game-box">
-                    <div class="thumbnail">
-                        <img src="http://www.pulsar.bg/image/cache/data/products4/Packshots1/Last_guardian-180x180.jpg" alt="">
-                        <div class="caption">
-                            <h3>Mafia III</h3>
-                            <p class="item-platform">PC</p>
-                            <p class="item-price">
-                                127 лв.
-                            </p>
-                            <p>
-                                <a href="#" class="btn btn-primary">Add to Cart</a> <a href="#" class="btn btn-default">Details</a>
-                            </p>
+                    <div class="col-md-3 col-sm-6 game-box">
+                        <div class="thumbnail">
+                            <img src="http://www.pulsar.bg/image/cache/data/products4/Packshots1/Last_guardian-180x180.jpg" alt="">
+                            <div class="caption">
+                                <h3>Mafia III</h3>
+                                <p class="item-platform">PC</p>
+                                <p class="item-price">
+                                    127 лв.
+                                </p>
+                                <p>
+                                    <a href="#" class="btn btn-primary">Add to Cart</a> <a href="#" class="btn btn-default">Details</a>
+                                </p>
+                            </div>
                         </div>
                     </div>
-                </div>
 
-                <div class="col-md-3 col-sm-6 game-box">
-                    <div class="thumbnail">
-                        <img src="http://www.pulsar.bg/image/cache/data/products4/Packshots1/Last_guardian-180x180.jpg" alt="">
-                        <div class="caption">
-                            <h3>The Elder Scrolls V: Skyrim Special Edition</h3>
-                            <p class="item-platform">PC</p>
-                            <p class="item-price">
-                                127 лв.
-                            </p>
-                            <p>
-                                <a href="#" class="btn btn-primary">Add to Cart</a> <a href="#" class="btn btn-default">Details</a>
-                            </p>
+                    <div class="col-md-3 col-sm-6 game-box">
+                        <div class="thumbnail">
+                            <img src="http://www.pulsar.bg/image/cache/data/products4/Packshots1/Last_guardian-180x180.jpg" alt="">
+                            <div class="caption">
+                                <h3>The Elder Scrolls V: Skyrim Special Edition</h3>
+                                <p class="item-platform">PC</p>
+                                <p class="item-price">
+                                    127 лв.
+                                </p>
+                                <p>
+                                    <a href="#" class="btn btn-primary">Add to Cart</a> <a href="#" class="btn btn-default">Details</a>
+                                </p>
+                            </div>
                         </div>
                     </div>
-                </div>
 
-                <div class="col-md-3 col-sm-6 game-box">
-                    <div class="thumbnail">
-                        <img src="http://www.pulsar.bg/image/cache/data/products4/Packshots1/Last_guardian-180x180.jpg" alt="">
-                        <div class="caption">
-                            <h3>Feature Label</h3>
-                            <p class="item-platform">PC</p>
-                            <p class="item-price">
-                                127 лв.
-                            </p>
-                            <p>
-                                <a href="#" class="btn btn-primary">Add to Cart</a> <a href="#" class="btn btn-default">Details</a>
-                            </p>
+                    <div class="col-md-3 col-sm-6 game-box">
+                        <div class="thumbnail">
+                            <img src="http://www.pulsar.bg/image/cache/data/products4/Packshots1/Last_guardian-180x180.jpg" alt="">
+                            <div class="caption">
+                                <h3>Feature Label</h3>
+                                <p class="item-platform">PC</p>
+                                <p class="item-price">
+                                    127 лв.
+                                </p>
+                                <p>
+                                    <a href="#" class="btn btn-primary">Add to Cart</a> <a href="#" class="btn btn-default">Details</a>
+                                </p>
+                            </div>
                         </div>
                     </div>
-                </div>
 
-                <div class="col-md-3 col-sm-6 game-box">
-                    <div class="thumbnail">
-                        <img src="http://www.pulsar.bg/image/cache/data/products4/Packshots1/Last_guardian-180x180.jpg" alt="">
-                        <div class="caption">
-                            <h3>Feature Label</h3>
-                            <p class="item-platform">PC</p>
-                            <p class="item-price">
-                                127 лв.
-                            </p>
-                            <p>
-                                <a href="#" class="btn btn-primary">Add to Cart</a> <a href="#" class="btn btn-default">Details</a>
-                            </p>
+                    <div class="col-md-3 col-sm-6 game-box">
+                        <div class="thumbnail">
+                            <img src="http://www.pulsar.bg/image/cache/data/products4/Packshots1/Last_guardian-180x180.jpg" alt="">
+                            <div class="caption">
+                                <h3>Feature Label</h3>
+                                <p class="item-platform">PC</p>
+                                <p class="item-price">
+                                    127 лв.
+                                </p>
+                                <p>
+                                    <a href="#" class="btn btn-primary">Add to Cart</a> <a href="#" class="btn btn-default">Details</a>
+                                </p>
+                            </div>
                         </div>
                     </div>
-                </div>
 
-                <div class="col-md-3 col-sm-6 game-box">
-                    <div class="thumbnail">
-                        <img src="http://www.pulsar.bg/image/cache/data/products4/Packshots1/Last_guardian-180x180.jpg" alt="">
-                        <div class="caption">
-                            <h3>Feature Label</h3>
-                            <p class="item-platform">PC</p>
-                            <p class="item-price">
-                                127 лв.
-                            </p>
-                            <p>
-                                <a href="#" class="btn btn-primary">Add to Cart</a> <a href="#" class="btn btn-default">Details</a>
-                            </p>
+                    <div class="col-md-3 col-sm-6 game-box">
+                        <div class="thumbnail">
+                            <img src="http://www.pulsar.bg/image/cache/data/products4/Packshots1/Last_guardian-180x180.jpg" alt="">
+                            <div class="caption">
+                                <h3>Feature Label</h3>
+                                <p class="item-platform">PC</p>
+                                <p class="item-price">
+                                    127 лв.
+                                </p>
+                                <p>
+                                    <a href="#" class="btn btn-primary">Add to Cart</a> <a href="#" class="btn btn-default">Details</a>
+                                </p>
+                            </div>
                         </div>
                     </div>
-                </div>
 
-                <div class="col-md-3 col-sm-6 game-box">
-                    <div class="thumbnail">
-                        <img src="http://www.pulsar.bg/image/cache/data/products4/Packshots1/Last_guardian-180x180.jpg" alt="">
-                        <div class="caption">
-                            <h3>Feature Label</h3>
-                            <p class="item-platform">PC</p>
-                            <p class="item-price">
-                                127 лв.
-                            </p>
-                            <p>
-                                <a href="#" class="btn btn-primary">Add to Cart</a> <a href="#" class="btn btn-default">Details</a>
-                            </p>
+                    <div class="col-md-3 col-sm-6 game-box">
+                        <div class="thumbnail">
+                            <img src="http://www.pulsar.bg/image/cache/data/products4/Packshots1/Last_guardian-180x180.jpg" alt="">
+                            <div class="caption">
+                                <h3>Feature Label</h3>
+                                <p class="item-platform">PC</p>
+                                <p class="item-price">
+                                    127 лв.
+                                </p>
+                                <p>
+                                    <a href="#" class="btn btn-primary">Add to Cart</a> <a href="#" class="btn btn-default">Details</a>
+                                </p>
+                            </div>
                         </div>
                     </div>
-                </div>
 
-                <div class="col-md-3 col-sm-6 game-box">
-                    <div class="thumbnail">
-                        <img src="http://www.pulsar.bg/image/cache/data/products4/Packshots1/Last_guardian-180x180.jpg" alt="">
-                        <div class="caption">
-                            <h3>Feature Label</h3>
-                            <p class="item-platform">PC</p>
-                            <p class="item-price">
-                                127 лв.
-                            </p>
-                            <p>
-                                <a href="#" class="btn btn-primary">Add to Cart</a> <a href="#" class="btn btn-default">Details</a>
-                            </p>
+                    <div class="col-md-3 col-sm-6 game-box">
+                        <div class="thumbnail">
+                            <img src="http://www.pulsar.bg/image/cache/data/products4/Packshots1/Last_guardian-180x180.jpg" alt="">
+                            <div class="caption">
+                                <h3>Feature Label</h3>
+                                <p class="item-platform">PC</p>
+                                <p class="item-price">
+                                    127 лв.
+                                </p>
+                                <p>
+                                    <a href="#" class="btn btn-primary">Add to Cart</a> <a href="#" class="btn btn-default">Details</a>
+                                </p>
+                            </div>
                         </div>
                     </div>
-                </div>
 
-                <div class="col-md-3 col-sm-6 game-box">
-                    <div class="thumbnail">
-                        <img src="http://www.pulsar.bg/image/cache/data/products4/Packshots1/Last_guardian-180x180.jpg" alt="">
-                        <div class="caption">
-                            <h3>Feature Label</h3>
-                            <p class="item-platform">PC</p>
-                            <p class="item-price">
-                                127 лв.
-                            </p>
-                            <p>
-                                <a href="#" class="btn btn-primary">Add to Cart</a> <a href="#" class="btn btn-default">Details</a>
-                            </p>
+                    <div class="col-md-3 col-sm-6 game-box">
+                        <div class="thumbnail">
+                            <img src="http://www.pulsar.bg/image/cache/data/products4/Packshots1/Last_guardian-180x180.jpg" alt="">
+                            <div class="caption">
+                                <h3>Feature Label</h3>
+                                <p class="item-platform">PC</p>
+                                <p class="item-price">
+                                    127 лв.
+                                </p>
+                                <p>
+                                    <a href="#" class="btn btn-primary">Add to Cart</a> <a href="#" class="btn btn-default">Details</a>
+                                </p>
+                            </div>
                         </div>
                     </div>
-                </div>
 
+                </div>
+                <!-- /.row -->
             </div>
-            <!-- /.row -->
+            <!-- app -->
         </div>
 
 
