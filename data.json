@@ -1,7 +1,17 @@
 [
     {
-        "title": "Owesame game",
-        "price": "26",
-        "url": ""
+        "title": "Wipeout Omega Collection",
+        "price": "71,96лв.",
+        "imgURL": "http://www.pulsar.bg/image/cache/data/products4/Packshots2/Wipeout-450x525.jpg"
+    },
+    {
+        "title": "Owesame",
+        "price": "27",
+        "imgURL": ""
+    },
+    {
+        "title": "Owesame game[1]",
+        "price": "27",
+        "imgURL": ""
     }
 ]
