@@ -11,7 +11,6 @@ SystemJS.config({
 
         'requester': './js/requesters/json-requester.js',
 
-        'shopping-cart-popup': './js/shopping-cart-popup.js',
         'app': './js/app.js'
     }
 });
