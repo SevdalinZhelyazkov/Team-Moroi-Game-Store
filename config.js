@@ -6,13 +6,24 @@ SystemJS.config({
         'jquery': './bower_components/jquery/dist/jquery.min.js',
         'sammy': './bower_components/sammy/lib/sammy.js',
         'handlebars': './bower_components/handlebars/handlebars.min.js',
+        'toastr':'./bower_components/toastr/toastr.js',
+        'cryptojs': './bower_components/crypto-js/crypto-js.js',
         
-        'template-loader': './js/helpers/template-loader.js',
+        'templates': './js/helpers/templates.js',
+        'constants': './js//helpers/constants.js',
+        'utils': './js/helpers/utils.js',
+        'kinvey': './js/helpers/kinvey.js',
 
-        'requester': './js/requesters/json-requester.js',
+        'usersController': './js/controllers/usersController.js',
+        'gamesController': './js/controllers/gamesController.js',
 
-        'app': './js/app.js'
+        'usersData': './js/data/usersData.js',
+        'gamesData': './js/data/gamesData.js',
+
+        'requester': './js/requests/requester.js',
+
+        'sammyApp': './js/sammyApp.js',
     }
 });
 
-SystemJS.import('app');
+System.import('sammyApp');
