@@ -1,10 +1,12 @@
 {
-  "name": "moroi",
+  "name": "Team-Moroi-GameStore",
+  "version": "1.0.0",
   "authors": [
-    "Sevdalin Zhelyazkov"
+    "Sevdalin Zhelyazkov",
+    "Pavel Purlantov",
+    "Cvetozar Kalchev"
   ],
-  "license": "ISC",
-  "homepage": "https://github.com/purlantov/Team-Moroi-Game-Store",
+  "license": "MIT",
   "ignore": [
     "**/.*",
     "node_modules",
@@ -13,14 +15,14 @@
     "tests"
   ],
   "dependencies": {
-    "jquery": "^3.2.1",
-    "handlebars": "^4.0.8",
-    "mocha": "^3.3.0",
-    "chai": "^3.5.0",
+    "jquery": "^3.1.0",
+    "handlebars": "^4.0.5",
+    "sammy": "^0.7.6",
     "bootstrap": "^3.3.7",
     "toastr": "^2.1.3",
-    "sammy": "^0.7.6",
-    "crypto-js": "^3.1.9"
+    "crypto-js": "^3.1.6",
+    "mocha": "^3.1.0",
+    "chai": "^3.5.0"
   },
   "resolutions": {
     "jquery": "1.9.1 - 3"

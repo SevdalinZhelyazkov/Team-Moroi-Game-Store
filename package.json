@@ -1,16 +1,13 @@
 {
-  "name": "moroi",
+  "name": "Team-Moroi-GameStore",
   "version": "1.0.0",
-  "description": "JSApps Teamwork Moroi",
+  "description": "",
   "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "author": "",
-  "license": "ISC",
   "dependencies": {
-    "request": "2.81.0",
-    "systemjs": "0.20.12",
-    "systemjs-plugin-babel": "0.0.21"
-  }
+    "systemjs": "^0.19.38",
+    "systemjs-plugin-babel": "0.0.15"
+  },
+  "devDependencies": {},
+  "author": "",
+  "license": "ISC"
 }
