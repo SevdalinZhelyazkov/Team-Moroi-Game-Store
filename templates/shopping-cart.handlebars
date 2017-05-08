@@ -1,0 +1,26 @@
+<!-- shopping cart item -->
+{{#if this.games}} {{#each this.games}}
+<div class="shopping-cart-item">
+    <a class="shopping-cart-item-delete">
+        <span class="glyphicon glyphicon-remove"></span>
+    </a>
+    <img src="{{this.image}}" alt="">
+    <div class="caption">
+        <h3 class="game-title">{{this.title}}</h3>
+        <p class="item-platform">{{this.platform}}</p>
+        <p class="item-price">${{this.price}}</p>
+    </div>
+</div>
+{{/each}} {{else}}
+<h3>Your shopping cart is empty!</h3>
+{{/if}}
+<!-- end of shopping cart item -->
+
+<!-- cd-cart-items -->
+<div class="price-container">
+    <div class="cd-cart-total">
+        <h3><span class="bold">Total:</span> <strong>${{this.totalPrice}}</strong></h3>
+        <a href="#/checkout" class="btn btn-success">Checkout</a>
+    </div>
+    <!-- cd-cart-total -->
+</div>
