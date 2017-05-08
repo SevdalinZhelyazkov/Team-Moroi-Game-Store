@@ -5,8 +5,6 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="">
-    <meta name="author" content="">
 
     <title>Moroi GamesStore</title>
 
@@ -14,15 +12,18 @@
     <link rel="icon" href="./img/favicon.ico" type="image/x-icon">
 
     <link href="./bower_components/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
-    <link href="./css/style.css" rel="stylesheet">
+    <link rel="stylesheet" href="./bower_components/toastr/toastr.css">
+    <link rel="stylesheet" href="css/style.css">
+
+    <script src="./bower_components/jquery/dist/jquery.min.js"></script>
+    <script src="./bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
 </head>
 
 <body>
-
     <!-- Navigation -->
     <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
         <div class="container">
-            <!-- Brand and toggle get grouped for better mobile display -->
+
             <div class="navbar-header">
                 <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
                     <span class="sr-only">Toggle navigation</span>
@@ -32,169 +33,43 @@
                 </button>
                 <a class="navbar-brand" href="#/">Moroi GameStore</a>
             </div>
-            <!-- Collect the nav links, forms, and other content for toggling -->
+
             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                 <ul class="nav navbar-nav">
-                    <li class="dropdown">
-                        <a class="dropdown-toggle" data-toggle="dropdown" href="#">
-                            Platform
-                            <span class="caret"></span>
-                        </a>
-                        <ul class="dropdown-menu">
-                            <li><a href="#">All</a></li>
-                            <li><a href="#">PC</a></li>
-                            <li><a href="#">PS3</a></li>
-                            <li><a href="#">XBOX</a></li>
-                        </ul>
-                    </li>
-                    <li class="dropdown">
-                        <a class="dropdown-toggle" data-toggle="dropdown" href="#">
-                            Genre
-                            <span class="caret"></span>
-                        </a>
-                        <ul class="dropdown-menu">
-                            <li><a href="#">All</a></li>
-                            <li><a href="#">Action</a></li>
-                            <li><a href="#">Adventure</a></li>
-                            <li><a href="#">FPS</a></li>
-                            <li><a href="#">Roleplay</a></li>
-                        </ul>
-                    </li>
-                </ul>
+                    <li><a href="#/platform/PC&1">PC</a></li>
+                    <li><a href="#/platform/PS4&1">PS4</a></li>
+                    <li><a href="#/platform/PS3&1">PS3</a></li>
+                    <li><a href="#/platform/XBOXONE&1">XBOXONE</a></li>
+                    <li><a href="#/platform/PlayStation VR&1" class="platform">PlayStation VR</a></li>
 
-                <ul class="nav navbar-nav navbar-right hide">
-                    <li><a href="#" data-toggle="modal" data-target="#registerModal"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>
-                    <li><a href="#" data-toggle="modal" data-target="#login-modal"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
                 </ul>
 
                 <ul class="nav navbar-nav navbar-right ">
-                    <li><a href="#" class="shopping-cart-btn"><span class="glyphicon glyphicon-shopping-cart"></span></a></li>
-                    <li><a href="#"><span class="glyphicon glyphicon-log-out"></span> Logout</a></li>
+                    <li id="nav-btn-register" class="hidden"><a href="#/register"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>
+                    <li id="nav-btn-login" class="hidden"><a href="#/login"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
+                    <li id="shopping-cart-button" class="hidden"><a class="shopping-cart-btn"><span class="glyphicon glyphicon-shopping-cart"></span></a></li>
+                    <li id="nav-btn-logout" class="hidden"><a href="#/home/1&0"><span class="glyphicon glyphicon-log-out"></span> Logout</a></li>
                 </ul>
 
                 <form class="navbar-form navbar-right">
                     <div class="form-group">
-                        <input type="text" class="form-control" placeholder="Name">
+                        <input type="text" id="search-input" class="form-control" placeholder="Name">
                     </div>
-                    <button type="button" class="btn btn-primary">Search</button>
+                    <button type="button" id="search-btn" class="btn btn-primary">Search</button>
                 </form>
             </div>
             <!-- /.navbar-collapse -->
         </div>
         <!-- /.container -->
     </nav>
-    
+
     <div class="shopping-cart-container">
         <div class="container">
-            <div class="shopping-cart-box">
-
-                <!-- shopping cart item -->
-                <div class="shopping-cart-item">
-                    <a href="#" class="shopping-cart-item-delete">
-                        <span class="glyphicon glyphicon-remove"></span>
-                    </a>
-                    <img src="http://www.pulsar.bg/image/cache/data/products4/Packshots1/Last_guardian-180x180.jpg" alt="">
-                    <div class="caption">
-                        <h3>Mafia III</h3>
-                        <p class="item-platform">PC</p>
-                        <p class="item-price">127 лв.</p>
-                    </div>
-                </div>
-                <!-- end of shopping cart item -->
-
-                <!-- shopping cart item -->
-                <div class="shopping-cart-item">
-                    <a href="#" class="shopping-cart-item-delete">
-                        <span class="glyphicon glyphicon-remove"></span>
-                    </a>
-                    <img src="http://www.pulsar.bg/image/cache/data/products4/Packshots1/Last_guardian-180x180.jpg" alt="">
-                    <div class="caption">
-                        <h3>Mafia III</h3>
-                        <p class="item-platform">PC</p>
-                        <p class="item-price">127 лв.</p>
-                    </div>
-                </div>
-                <!-- end of shopping cart item -->
-
-                <!-- shopping cart item -->
-                <div class="shopping-cart-item">
-                    <a href="#" class="shopping-cart-item-delete">
-                        <span class="glyphicon glyphicon-remove"></span>
-                    </a>
-                    <img src="http://www.pulsar.bg/image/cache/data/products4/Packshots1/Last_guardian-180x180.jpg" alt="">
-                    <div class="caption">
-                        <h3>Mafia III</h3>
-                        <p class="item-platform">PC</p>
-                        <p class="item-price">127 лв.</p>
-                    </div>
-                </div>
-                <!-- end of shopping cart item -->
-
-                <div class="shopping-cart-total">
-                    Total: <span class="total-sum">381 лв.</span>
-                    <p class="pull-right">
-                        <a href="#" class="btn btn-success">Checkout</a>
-                    </p>
-                </div>
-            </div>
+            <div class="shopping-cart-box"></div>
         </div>
     </div>
 
-    <!-- Login Modal -->
-    <div id="login-modal" class="modal fade" role="dialog">
-        <div class="modal-dialog">
-            <!-- Modal content-->
-            <div class="modal-content">
-                <div class="modal-header">
-                    <button type="button" class="close" data-dismiss="modal">&times;</button>
-                    <h4 class="modal-title">Login</h4>
-                </div>
-                <div class="modal-body">
-                    <form id="login-form">
-                        <div class="form-group">
-                            <label for="login_username">Username:</label>
-                            <input type="text" class="form-control" id="login_username" placeholder="Enter username" required>
-                        </div>
-                        <div class="form-group">
-                            <label for="login_password">Password:</label>
-                            <input type="password" class="form-control" id="login_password" placeholder="Enter password" required>
-                        </div>
-                        <button type="submit" class="btn btn-primary btn-lg btn-block">Login</button>
-                    </form>
-                </div>
-            </div>
-        </div>
-    </div>
-    <!-- Sign Up Modal -->
-    <div id="registerModal" class="modal fade" role="dialog">
-        <div class="modal-dialog">
-            <!-- Modal content-->
-            <div class="modal-content">
-                <div class="modal-header">
-                    <button type="button" class="close" data-dismiss="modal">&times;</button>
-                    <h4 class="modal-title">Sign Up</h4>
-                </div>
-                <div class="modal-body">
-                    <form id="login-form">
-                        <div class="form-group">
-                            <label for="register_username">Username:</label>
-                            <input type="text" class="form-control" id="register_username" placeholder="Enter username" required>
-                        </div>
-                        <div class="form-group">
-                            <label for="register_password">Password:</label>
-                            <input type="password" class="form-control" id="register_password" placeholder="Enter password" required>
-                        </div>
-                        <button type="submit" class="btn btn-primary btn-lg btn-block">Sign Up</button>
-                    </form>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <!-- Page Content -->
-    <div class="container">
-
-        <!-- Jumbotron Header -->
+    <div id="container" class="container">
         <header class="jumbotron big-welcome-banner">
             <h1>Moroi GameStore!</h1>
             <p>Browse in our huge collection of modern games on all platforms. In Moroi GameStore you can find all hot and horny
@@ -202,194 +77,38 @@
             </p>
         </header>
 
-        <hr>
+        <hr />
 
         <!-- Title -->
         <div class="row">
             <div class="col-lg-12">
-
-                <div class="form-group pull-right">
-                    <label for="sel1">Order by:</label>
-                    <select class="form-control" id="order-by">
-                        <option value="Default">Default</option>
-                        <option value="titleAscending">Name (asc.)</option>
-                        <option value="titleDescending">Name (desc.)</option>
-                        <option value="priceAscending">Price (asc.)</option>
-                        <option value="priceDescending">Price (desc.)</option>
-                    </select>
+                <!--<h3 class="pull-left nomargin">Games List</h3>-->
+                <div id="filters" class="form-group pull-right">
+                    <label>Order by:</label>
+                    <div class="btn-group" id="orderby">
+                        <button type="button" class="form-control btn btn-default dropdown-toggle" data-toggle="dropdown">
+                            Default
+                        </button>
+                        <ul class="dropdown-menu" role="menu">
+                            <li><a href="#">Default</a></li>
+                            <li><a href="#">Title ascending</a></li>
+                            <li><a href="#">Title descending</a></li>
+                            <li><a href="#">Price ascending</a></li>
+                            <li><a href="#">Price descending</a></li>
+                        </ul>
+                    </div>
                 </div>
+
             </div>
         </div>
         <!-- /.row -->
 
         <div class="game-box-container">
-            <!-- Page Features  -->
-            <div id="content" class="row text-center">
-
-                <div class="col-md-3 col-sm-6 game-box">
-                    <div class="thumbnail">
-                        <img src="http://www.pulsar.bg/image/cache/data/products4/Packshots1/Last_guardian-180x180.jpg" alt="">
-                        <div class="caption">
-                            <h3>Mafia III</h3>
-                            <p class="item-platform">PC</p>
-                            <p class="item-price">
-                                127 лв.
-                            </p>
-                            <p>
-                                <a href="#" class="btn btn-primary">Add to Cart</a> <a href="#/details" class="btn btn-default">Details</a>
-                            </p>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col-md-3 col-sm-6 game-box">
-                    <div class="thumbnail">
-                        <img src="http://www.pulsar.bg/image/cache/data/products4/Packshots1/Last_guardian-180x180.jpg" alt="">
-                        <div class="caption">
-                            <h3>The Elder Scrolls V: Skyrim Special Edition</h3>
-                            <p class="item-platform">PC</p>
-                            <p class="item-price">
-                                127 лв.
-                            </p>
-                            <p>
-                                <a href="#" class="btn btn-primary">Add to Cart</a> <a href="#" class="btn btn-default">Details</a>
-                            </p>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col-md-3 col-sm-6 game-box">
-                    <div class="thumbnail">
-                        <img src="http://www.pulsar.bg/image/cache/data/products4/Packshots1/Last_guardian-180x180.jpg" alt="">
-                        <div class="caption">
-                            <h3>Feature Label</h3>
-                            <p class="item-platform">PC</p>
-                            <p class="item-price">
-                                127 лв.
-                            </p>
-                            <p>
-                                <a href="#" class="btn btn-primary">Add to Cart</a> <a href="#" class="btn btn-default">Details</a>
-                            </p>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col-md-3 col-sm-6 game-box">
-                    <div class="thumbnail">
-                        <img src="http://www.pulsar.bg/image/cache/data/products4/Packshots1/Last_guardian-180x180.jpg" alt="">
-                        <div class="caption">
-                            <h3>Feature Label</h3>
-                            <p class="item-platform">PC</p>
-                            <p class="item-price">
-                                127 лв.
-                            </p>
-                            <p>
-                                <a href="#" class="btn btn-primary">Add to Cart</a> <a href="#" class="btn btn-default">Details</a>
-                            </p>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col-md-3 col-sm-6 game-box">
-                    <div class="thumbnail">
-                        <img src="http://www.pulsar.bg/image/cache/data/products4/Packshots1/Last_guardian-180x180.jpg" alt="">
-                        <div class="caption">
-                            <h3>Feature Label</h3>
-                            <p class="item-platform">PC</p>
-                            <p class="item-price">
-                                127 лв.
-                            </p>
-                            <p>
-                                <a href="#" class="btn btn-primary">Add to Cart</a> <a href="#" class="btn btn-default">Details</a>
-                            </p>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col-md-3 col-sm-6 game-box">
-                    <div class="thumbnail">
-                        <img src="http://www.pulsar.bg/image/cache/data/products4/Packshots1/Last_guardian-180x180.jpg" alt="">
-                        <div class="caption">
-                            <h3>Feature Label</h3>
-                            <p class="item-platform">PC</p>
-                            <p class="item-price">
-                                127 лв.
-                            </p>
-                            <p>
-                                <a href="#" class="btn btn-primary">Add to Cart</a> <a href="#" class="btn btn-default">Details</a>
-                            </p>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col-md-3 col-sm-6 game-box">
-                    <div class="thumbnail">
-                        <img src="http://www.pulsar.bg/image/cache/data/products4/Packshots1/Last_guardian-180x180.jpg" alt="">
-                        <div class="caption">
-                            <h3>Feature Label</h3>
-                            <p class="item-platform">PC</p>
-                            <p class="item-price">
-                                127 лв.
-                            </p>
-                            <p>
-                                <a href="#" class="btn btn-primary">Add to Cart</a> <a href="#" class="btn btn-default">Details</a>
-                            </p>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col-md-3 col-sm-6 game-box">
-                    <div class="thumbnail">
-                        <img src="http://www.pulsar.bg/image/cache/data/products4/Packshots1/Last_guardian-180x180.jpg" alt="">
-                        <div class="caption">
-                            <h3>Feature Label</h3>
-                            <p class="item-platform">PC</p>
-                            <p class="item-price">
-                                127 лв.
-                            </p>
-                            <p>
-                                <a href="#" class="btn btn-primary">Add to Cart</a> <a href="#" class="btn btn-default">Details</a>
-                            </p>
-                        </div>
-                    </div>
-                </div>
-
-            </div>
-            <!-- /.row -->
+            <div id="content"></div>
+            <div id="shopping-cart-menu" class="col-xs-offset-9 col-xs-3 hidden position-fixed"></div>
         </div>
 
-
-        <div class="row">
-            <div class="col-md-12">
-                <div class="row thumbnail nomargin">
-                    <div class="col-sm-4 game-main text-center">
-                        <img src="http://www.pulsar.bg/image/cache/data/products4/Packshots1/Last_guardian-180x180.jpg" alt="">
-                        <div class="caption">
-                            <h3>Feature Label</h3>
-                            <p class="item-platform">PC</p>
-                            <p class="item-price">
-                                127 лв.
-                            </p>
-                            <p>
-                                <a href="#" class="btn btn-primary">Add to Cart</a> <a href="#" class="btn btn-default">Details</a>
-                            </p>
-                        </div>
-                    </div>
-                    <div class="col-sm-8">
-                        <h4>Description</h4>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vitae rerum libero, hic qui nam tenetur
-                            deserunt quis magni quibusdam praesentium fugiat unde debitis fuga, repellat, ducimus soluta
-                            voluptate reprehenderit nostrum. Pariatur illum totam delectus, maxime labore assumenda sint
-                            praesentium ipsa tempora sunt dolorum cupiditate libero doloribus dolor non dolore maiores.</p>
-
-                        <div class="fb-like" data-href="https://developers.facebook.com/docs/plugins/" data-layout="standard" data-action="recommend"
-                            data-show-faces="true" data-share="true"></div>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <hr>
+        <hr />
 
         <!-- Footer -->
         <footer>
@@ -399,30 +118,10 @@
                 </div>
             </div>
         </footer>
-
     </div>
-    <!-- /.container -->
 
-    <!-- SystemJS -->
-    <script src="node_modules/systemjs/dist/system.js"></script>
-    <script src="config.js"></script>
-
-    <!-- Bootstrap -->
-    <script src="./bower_components/jquery/dist/jquery.min.js"></script>
-    <script src="./bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
-    
-
-    <!--<div id="fb-root"></div>
-    <script>
-        (function (d, s, id) {
-            var js, fjs = d.getElementsByTagName(s)[0];
-            if (d.getElementById(id)) return;
-            js = d.createElement(s);
-            js.id = id;
-            js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.9";
-            fjs.parentNode.insertBefore(js, fjs);
-        }(document, 'script', 'facebook-jssdk'));
-    </script>-->
+    <script src="./node_modules/systemjs/dist/system.js"></script>
+    <script src="./config.js"></script>
 
 </body>
 
