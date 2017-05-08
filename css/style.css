@@ -8,9 +8,20 @@ body {
 	padding-right: 0!important;
 }
 
+.loginRegisterForm {
+    min-width: 275px;
+    max-width: 40%;
+    margin: 0 auto;
+    padding: 15px;
+    background: #fff;
+    border-radius: 5px;
+    border: 1px solid #ddd;
+}
+
 .shopping-cart-btn,
 .shopping-cart-btn:hover {
 	background: #333!important;
+    cursor: pointer;
 }
 
 .shopping-cart-container {
@@ -29,6 +40,8 @@ body {
     float: right;
     min-width: 290px;
     max-width: 40%;
+    max-height: 450px;
+    overflow-y: auto;
 }
 
 .shopping-cart-item {
@@ -45,6 +58,7 @@ body {
     position: absolute;
     right: 0;
     color: red;
+    cursor: pointer;
 }
 
 .shopping-cart-item .caption {
@@ -92,6 +106,15 @@ body {
     border-right: 1px solid #ddd;
 }
 
+.game-checkout {
+    display: inline-block;
+    float: none;
+}
+
+img.game-image {
+    width: 100%;
+}
+
 .item-platform {
     font-size: 16px;
     color: #777;
@@ -122,6 +145,10 @@ footer {
 
     .game-box {
         display: inline-block;
+    }
+
+    .col-sm-3 {
+        width: 24%;
     }
 }
 
