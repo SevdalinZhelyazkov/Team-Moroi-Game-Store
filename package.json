@@ -11,10 +11,6 @@
   "dependencies": {
     "request": "2.81.0",
     "systemjs": "0.20.12",
-    "systemjs-plugin-babel": "0.0.21",
-    "bower": ""
-  },
-  "scripts": {
-    "postinstall" : "bower install"
+    "systemjs-plugin-babel": "0.0.21"
   }
 }
