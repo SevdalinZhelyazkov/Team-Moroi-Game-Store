@@ -35,7 +35,7 @@ class GamesData {
 
     searchGameByTitle(titleName) {
         var filter = JSON.stringify({
-            "title": { "$regex": `^(?i)${titleName}` }
+            "title": titleName
         });
         var url = this.urls.searchGameByTitleUrl(filter);
 
