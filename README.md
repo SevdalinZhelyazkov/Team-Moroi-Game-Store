@@ -10,6 +10,18 @@ npm install -g http-server
 http-server .
 ```
 
+JavaScript SPA application with basic functionality:
+○ List items
+○ Add items to shopping cart
+○ Remove items from shopping cart
+○ View item details
+○ Search by item name
+○ Browse by item category
+○ Register and login
+○ Responsive design
+
+```
+
 Contributors:
 
 [Pavel Purlantov, ](https://github.com/purlantov)
