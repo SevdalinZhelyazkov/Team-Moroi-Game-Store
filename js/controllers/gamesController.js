@@ -126,14 +126,12 @@ class GamesController {
                 UTILS.hideFilters()
 
                 if (UTILS.isUserLoggedIn()) {
-                    $('#btn-like').removeClass('hidden');
-                    $('#btn-dislike').removeClass('hidden');
                     $('#btn-add-to-cart').removeClass('hidden');
                 } else {
-                    $('#btn-like').addClass('hidden');
-                    $('#btn-dislike').addClass('hidden');
                     $('#btn-add-to-cart').addClass('hidden');
                 }
+
+                $('#fb-share').html('<iframe src="https://www.facebook.com/plugins/share_button.php?href=' + location.href + '&layout=button_count&size=large&mobile_iframe=false&width=105&height=28&appId" width="105" height="28" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowTransparency="true"></iframe>');
 
                 $('#btn-add-to-cart').on('click', function () {
                     let canAdd = true;
